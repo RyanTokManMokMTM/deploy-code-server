@@ -19,6 +19,12 @@ RUN curl https://rclone.org/install.sh | sudo bash
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
+
+RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+RUN sudo apt-add-repository https://cli.github.com/packages
+RUN sudo apt update
+RUN sudo apt install gh
+
 # RUN code-server --install-extension esbenp.prettier-vscode
 # RUN sudo apt-get install -y build-essential
 # RUN COPY myTool /home/coder/myTool

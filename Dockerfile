@@ -29,6 +29,10 @@ RUN sudo apt install gh
 # RUN sudo apt-get install -y build-essential
 # RUN COPY myTool /home/coder/myTool
 
+#設定 git 資料
+RUN git config --global user.email "st0511056@gmail.com"
+RUN git config --global user.name "chizi"
+
 # Fix permissions for code-server
 RUN sudo chown -R coder:coder /home/coder/.local
 
